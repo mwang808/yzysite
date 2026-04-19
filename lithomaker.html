@@ -3,61 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Lithomaker · YZY Consulting LLC</title>
 
   <!-- SEO -->
   <meta
     name="description"
-    content="Lithomaker is a STEM project by YZY Consulting LLC that converts images into lithophane models for 3D printing."
+    content="Turn any photo into a print‑ready lithophane in minutes. No CAD, no plugins. Upload, preview, export STL, and 3D print."
   />
   <meta name="robots" content="index, follow" />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://www.yzyconsulting.com/lithomaker.html" />
+  <link rel="canonical" href="https://www.yzyconsulting.com/lithomaker"/>
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
+  <!-- External styles -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Page-specific styles -->
+  <style>
+    .hero-cta {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #1a73e8;
+      color: #fff;
+      padding: 0.75rem 1.4rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #135ecf;
+    }
+
+    .cta-secondary {
+      font-size: 0.95rem;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .cta-secondary:hover {
+      text-decoration: underline;
+    }
+
+    /* App hidden initially */
+    #app-section {
+      display: none;
+      margin-top: 3rem;
+    }
+
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-flex">
-      <div class="logo">
-        <img src="assets/images/logo.png" alt="YZY Consulting LLC logo" />
-        <span>YZY Consulting LLC</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="lithomaker.html">Lithomaker</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Lithomaker</h1>
-      <p>
-        A STEM project that converts images into lithophane models for 3D printing.
-      </p>
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="YZY Consulting LLC logo"/>
+      <span>YZY Consulting LLC</span>
     </div>
-  </section>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="lithomaker.html">Lithomaker</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Turn Any Photo Into a Print‑Ready Lithophane in Minutes</h1>
+
+    <p>
+      No CAD. No plugins. Upload a photo, preview the result, export an STL, and print.
+    </p>
+
+  </div>
+</section>
 
   <!-- Description, Instructions, Video & Notes -->
   <section class="page container">
     <h2>What is Lithomaker?</h2>
     <p>
-      Lithomaker is a simple web tool that converts a grayscale image into a
-      lithophane 3D model suitable for 3D printing. When illuminated from behind,
-      the printed lithophane reveals image details through variations in thickness.
+      Lithomaker converts images into lithophane 3D models for 3D printing. When backlit,
+      thickness variations reveal image detail, making lithophanes ideal for lamps, frames,
+      and décor.
     </p>
 
     <h3>How to use</h3>
@@ -67,8 +120,8 @@
         Be mindful of image size—very large images may slow processing.
       </li>
       <li>
-        <strong>(Optional)
-Adjust image settings:</strong> Adjust brightness and contrast to enhance details and improve the lithophane result.
+        <strong>
+Adjust image settings (Optional):</strong> Adjust brightness and contrast to enhance details and improve the lithophane result.
       </li>
       <li>
         <strong>Generate and download:</strong> Create the lithophane model and
@@ -118,16 +171,24 @@ width="280"
     </p>
   </section>
 
-  <!-- Embedded App -->
-  <section class="page container">
-    <div class="iframe-wrapper">
-      <iframe
-        src="https://lithomaker.onrender.com/"
-        loading="lazy"
-        title="Lithomaker web application"
-      ></iframe>
-    </div>
-  </section>
+<!-- ✅ Second CTA BELOW Examples -->
+<section class="page container" style="text-align:center; ">
+  <a href="#" class="btn-primary launch-lithomaker">
+    Launch Lithomaker
+  </a>
+</section>
+
+<!-- ✅ Embedded App (Hidden Initially) -->
+<section class="page container" id="app-section">
+  <div class="iframe-wrapper", style="margin-top: -20rem;">
+    <iframe
+      id="lithomaker-iframe"
+      title="Lithomaker Web Application"
+      loading="lazy"
+      sandbox="allow-scripts allow-same-origin allow-forms">
+    </iframe>
+  </div>
+</section>
 
     <!-- Monetization / Support Section -->
     <div style="text-align: center; margin: 50px 20px 30px; padding: 25px; background: #f8f9fa; border-radius: 12px; max-width: 620px; margin-left: auto; margin-right: auto;">
@@ -159,7 +220,35 @@ width="280"
     <a href="privacy.html">Privacy Policy</a>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+<!-- ✅ JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".launch-lithomaker");
+    const appSection = document.getElementById("app-section");
+    const iframe = document.getElementById("lithomaker-iframe");
+
+    let loaded = false;
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (!loaded) {
+          iframe.src = "https://lithomaker.onrender.com/";
+          loaded = true;
+        }
+
+        appSection.style.display = "block";
+        appSection.scrollIntoView({ behavior: "smooth" });
+
+        // ✅ Hide all Launch buttons once app is visible
+        buttons.forEach(btn => {
+          btn.style.display = "none";
+        });
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
