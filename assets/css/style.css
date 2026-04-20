@@ -162,7 +162,7 @@ body {
 /* -------- Responsive iframe for Lithomaker -------- */
 .iframe-wrapper {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
 }
 
 .iframe-wrapper iframe {
