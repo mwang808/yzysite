@@ -58,15 +58,23 @@
     /* App hidden initially */
     #app-section {
       display: none;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
-    .iframe-wrapper iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-      border-radius: 10px;
-    }
+
+.iframe-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 1100px;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
   </style>
 </head>
 
@@ -180,7 +188,7 @@ width="280"
 
 <!-- ✅ Embedded App (Hidden Initially) -->
 <section class="page container" id="app-section">
-  <div class="iframe-wrapper" style="margin-top: -10rem;">
+  <div class="iframe-wrapper" >
     <iframe
       id="lithomaker-iframe"
       title="Lithomaker Web Application"
